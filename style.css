@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: #14b016;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: "VT323", monospace;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    color: rgb(0, 0, 0);
+}
+
+.app-container {
+    width: 36rem;
+    height: 36rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    border: 12px solid #606060;
+}
+
+.scores {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.scores p {
+    font-size: 1.5rem;
+}
+.score-icon {
+    width: 24px; 
+    height: 24px;
+    vertical-align: middle; 
+    margin-right: 8px; 
+}
+
+
+.board {
+    width: 85%;
+    height: 85%;
+    display: grid;
+    grid-template-columns: repeat(21, 1fr);
+    grid-template-rows: repeat(21, 1fr);
+    position: relative;
+    outline: 3px solid white; 
+}
+
+
+
+.title {
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    animation: greenGlow 1.5s ease-in-out infinite;
+}
+
+@keyframes greenGlow {
+    0%, 100% {
+        text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+    }
+    50% {
+        text-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+    }
+}
+
+
+.tile.light-green {
+    background-color: #228B22;
+}
+
+.tile.dark-green {
+    background-color: #006400;
+}
+
+.snake {
+    background-color: #36f600;
+}
+
+.food {
+    background: url('apple.png') no-repeat center center; 
+    background-size: cover; 
+    width: 100%;
+    height: 100%;
+    border-radius: 0; 
+}
+
+
+.btn {
+    width: 8rem;
+    height: 3.5rem;
+    font-family: "VT323", monospace;
+    margin-top: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #02ff06;
+}
+
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    animation: fadeInScale 2s ease-out, pulse 1.5s infinite ease-in-out;
+}
+.instructions {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 2rem;
+    font-family: "VT323", monospace;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7); 
+    border: 2px solid white;
+    border-radius: 10px;
+    animation: fadeInOut 1.5s ease-in-out infinite;
+}
+
+
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
