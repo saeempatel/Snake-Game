@@ -4,4 +4,4 @@ I created this Snake Game as a modern reimagining of the classic arcade favorite
 
 I paid special attention to the visual design to make it appealing. The food is bright and stands out clearly on the board. To guide players, I included a helpful "Press Arrow Keys to Start" message that disappears as soon as they make their first move. For replayability, I added a functional restart button so players can instantly jump back into the game. The game also tracks both the current score and the high score. Overall, this project was a fun mix of classic mechanics, creative visuals, and interactive features, making it an enjoyable experience for all.
 
-https://github.com/saeempatel/Snake-Game/issues/1#issue-2849344167
+[https://github.com/saeempatel/Snake-Game/issues/1#issue-2849344167](https://github.com/user-attachments/assets/7854228e-fd2f-4d56-b1a5-4ebc905d546d)
